@@ -1043,4 +1043,30 @@ mean(elEventResponseNEP$excessNEP[elEventResponseNEP$excessNEP<0&crEventResponse
        crEventResponseNEP$excessNEP[elEventResponseNEP$excessNEP<0&crEventResponseNEP$excessNEP<0])
 
 
+# metabolic response compared to seasonal metabolic responses for each lake 
+moSeas2013<-max(moTemp$rQuad[strftime(moTemp$dateTime,'%Y')==2013])-min(moTemp$rQuad[strftime(moTemp$dateTime,'%Y')==2013])
+moSeas2014<-max(moTemp$rQuad[strftime(moTemp$dateTime,'%Y')==2014])-min(moTemp$rQuad[strftime(moTemp$dateTime,'%Y')==2014])
+mean(c(moEventResponseR$maxDisplace[strftime(moEventResponseR$dateTime,'%Y')==2013]/moSeas2013,moEventResponseR$maxDisplace[strftime(moEventResponseR$dateTime,'%Y')==2014]/moSeas2014))
+
+elSeas2013<-max(elTemp$rQuad[strftime(elTemp$dateTime,'%Y')==2013])-min(elTemp$rQuad[strftime(elTemp$dateTime,'%Y')==2013])
+elSeas2014<-max(elTemp$rQuad[strftime(elTemp$dateTime,'%Y')==2014])-min(elTemp$rQuad[strftime(elTemp$dateTime,'%Y')==2014])
+mean(c(elEventResponseR$maxDisplace[strftime(elEventResponseR$dateTime,'%Y')==2013]/elSeas2013,elEventResponseR$maxDisplace[strftime(elEventResponseR$dateTime,'%Y')==2014]/elSeas2014))
+
+crSeas2013<-max(crTemp$rQuad[strftime(crTemp$dateTime,'%Y')==2013])-min(crTemp$rQuad[strftime(crTemp$dateTime,'%Y')==2013])
+crSeas2014<-max(crTemp$rQuad[strftime(crTemp$dateTime,'%Y')==2014])-min(crTemp$rQuad[strftime(crTemp$dateTime,'%Y')==2014])
+mean(c(crEventResponseR$maxDisplace[strftime(crEventResponseR$dateTime,'%Y')==2013]/crSeas2013,crEventResponseR$maxDisplace[strftime(crEventResponseR$dateTime,'%Y')==2014]/crSeas2014))
+
+moSeas2013<-max(moTemp$gppQuad[strftime(moTemp$dateTime,'%Y')==2013])-min(moTemp$gppQuad[strftime(moTemp$dateTime,'%Y')==2013])
+moSeas2014<-max(moTemp$gppQuad[strftime(moTemp$dateTime,'%Y')==2014])-min(moTemp$gppQuad[strftime(moTemp$dateTime,'%Y')==2014])
+mean(c(moEventResponseGPP$maxDisplace[strftime(moEventResponseGPP$dateTime,'%Y')==2013]/moSeas2013,moEventResponseGPP$maxDisplace[strftime(moEventResponseGPP$dateTime,'%Y')==2014]/moSeas2014))
+
+elSeas2013<-max(elTemp$gppQuad[strftime(elTemp$dateTime,'%Y')==2013])-min(elTemp$gppQuad[strftime(elTemp$dateTime,'%Y')==2013])
+elSeas2014<-max(elTemp$gppQuad[strftime(elTemp$dateTime,'%Y')==2014])-min(elTemp$gppQuad[strftime(elTemp$dateTime,'%Y')==2014])
+mean(c(elEventResponseGPP$maxDisplace[strftime(elEventResponseGPP$dateTime,'%Y')==2013]/elSeas2013,elEventResponseGPP$maxDisplace[strftime(elEventResponseGPP$dateTime,'%Y')==2014]/elSeas2014))
+
+crSeas2013<-max(crTemp$gppQuad[strftime(crTemp$dateTime,'%Y')==2013])-min(crTemp$gppQuad[strftime(crTemp$dateTime,'%Y')==2013])
+crSeas2014<-max(crTemp$gppQuad[strftime(crTemp$dateTime,'%Y')==2014])-min(crTemp$gppQuad[strftime(crTemp$dateTime,'%Y')==2014])
+mean(c(crEventResponseGPP$maxDisplace[strftime(crEventResponseGPP$dateTime,'%Y')==2013]/crSeas2013,crEventResponseGPP$maxDisplace[strftime(crEventResponseGPP$dateTime,'%Y')==2014]/crSeas2014))
+
+
 
