@@ -1030,6 +1030,17 @@ sum(elEventLoad$docLoad)/sum(elData$totalAlloC)
 sum(crEventLoad$docLoad)/sum(crData$totalAlloC)
 
 
+# excess load comparison 
+mean(moEventLoad$excessLoad/crEventLoad$excessLoad)
+mean(moEventLoad$excessLoad/elEventLoad$excessLoad)
+mean(elEventLoad$excessLoad/crEventLoad$excessLoad)
+
+mean(moEventResponseNEP$excessNEP[moEventResponseNEP$excessNEP<0&crEventResponseNEP$excessNEP<0]/
+       crEventResponseNEP$excessNEP[moEventResponseNEP$excessNEP<0&crEventResponseNEP$excessNEP<0])
+mean(moEventResponseNEP$excessNEP[moEventResponseNEP$excessNEP<0&elEventResponseNEP$excessNEP<0]/
+       elEventResponseNEP$excessNEP[moEventResponseNEP$excessNEP<0&elEventResponseNEP$excessNEP<0])
+mean(elEventResponseNEP$excessNEP[elEventResponseNEP$excessNEP<0&crEventResponseNEP$excessNEP<0]/
+       crEventResponseNEP$excessNEP[elEventResponseNEP$excessNEP<0&crEventResponseNEP$excessNEP<0])
 
 
 
